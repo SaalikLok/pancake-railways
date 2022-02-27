@@ -16,18 +16,33 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
+      body: Container(
+        padding: const EdgeInsets.only(left: 35, right: 35),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Image.asset('assets/train.png'),
+            ),
+            const Icon(
+              Icons.food_bank_sharp,
+              color: Colors.pink,
+              size: 55,
+              semanticLabel: 'Food House Icon',
+            ),
+            const Text(
               'Purchase your Pancake Pass',
-              style: TextStyle(fontSize: 25),
+              style: TextStyle(fontSize: 35),
               textAlign: TextAlign.center,
             ),
-            Text(
-              'With Pancake Railways, we deliver you directly to the best breakfast destinations in the world. Purchase your pass today!',
-              textAlign: TextAlign.center,
+            const Padding(
+              padding: EdgeInsets.only(top: 25),
+              child: Text(
+                'With Pancake Railways, we deliver you directly to the best breakfast destinations in the world. Purchase your pass today!',
+                style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.center,
+              ),
             ),
           ],
         ),
