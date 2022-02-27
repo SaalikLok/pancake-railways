@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pancake_railways/src/screens/tickets_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key, required this.title}) : super(key: key);
@@ -37,25 +38,26 @@ class _HomePageState extends State<HomePage> {
               textAlign: TextAlign.center,
             ),
             const Padding(
-              padding: EdgeInsets.only(top: 25),
+              padding: EdgeInsets.only(top: 25, bottom: 15),
               child: Text(
                 'With Pancake Railways, we deliver you directly to the best breakfast destinations in the world. Purchase your pass today!',
                 style: TextStyle(fontSize: 18),
                 textAlign: TextAlign.center,
               ),
             ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const TicketsPage(
+                                title: 'Buy Tickets',
+                              )));
+                },
+                child: const Text('Buy Tickets'))
           ],
         ),
       ),
-      floatingActionButton: const FloatingActionButton(
-        onPressed: pressMe,
-        tooltip: 'Add Ticket',
-        child: Icon(Icons.train_sharp),
-      ),
     );
   }
-}
-
-void pressMe() {
-  print("Trying to purchase!");
 }
