@@ -16,6 +16,7 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.only(left: 35, right: 35),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(10),
@@ -28,7 +29,7 @@ class HomePage extends StatelessWidget {
               semanticLabel: 'Food House Icon',
             ),
             const Text(
-              'Purchase your Pancake Pass',
+              'Get your Ticket',
               style: TextStyle(fontSize: 35),
               textAlign: TextAlign.center,
             ),
@@ -45,11 +46,11 @@ class HomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const TicketsPage(
-                                title: 'Buy Tickets',
-                              )));
+                        builder: (context) => const TicketsPage(
+                              title: 'Get Tickets',
+                            )));
                 },
-                child: const Text('Buy Tickets'))
+                child: const Text('Get Tickets'))
           ],
         ),
       ),
