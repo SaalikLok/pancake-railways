@@ -10,10 +10,6 @@ class TicketsPage extends StatefulWidget {
   State<TicketsPage> createState() => _TicketsPageState();
 }
 
-class _Tickets {
-  
-}
-
 class _TicketsPageState extends State<TicketsPage> {
   @override
   Widget build(BuildContext context) {
@@ -28,13 +24,9 @@ class _TicketsPageState extends State<TicketsPage> {
             mainAxisAlignment: MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: const <Widget> [
-              Text(
-                'Choose your ticket.',
-                style: TextStyle(fontSize: 18),
-                ),
-              TicketCard(ticketTitle: "Basic Breakfast", description: "Get on board, and access the fantastic breakfast cart."),
-              TicketCard(ticketTitle: "Super Syrup", description: "Meal service at your seat. Plus, get first pick of seats."),
-              TicketCard(ticketTitle: "Fantastmic Flapjack", description: "Top quality breakfast service and your own cabin."),
+              TicketCard(ticketTitle: "Basic Breakfast", description: "Get on board, and access the fantastic breakfast cart.", icon: Icons.breakfast_dining_rounded),
+              TicketCard(ticketTitle: "Super Syrup", description: "Meal service at your seat. Plus, get first pick of seats.", icon: Icons.new_label_rounded),
+              TicketCard(ticketTitle: "Fantastmic Flapjack", description: "Top quality breakfast service and your own cabin.", icon: Icons.star),
             ],
           )
       ),

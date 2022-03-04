@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => const TicketsPage(
-                              title: 'Get Tickets',
+                              title: 'Choose your ticket',
                             )));
                 },
                 child: const Text('Get Tickets'))
