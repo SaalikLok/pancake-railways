@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// consider making this component stateless, since the state might be handled on the screen level
+
 class TicketCard extends StatefulWidget {
   const TicketCard({
     Key? key,
