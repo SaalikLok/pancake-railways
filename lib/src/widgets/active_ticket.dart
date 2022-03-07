@@ -12,6 +12,11 @@ class ActiveTicket extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Card(child: Text("Active Ticket"));
+    return Card(
+        child: Padding(
+            padding: EdgeInsets.all(20),
+            child: Column(
+              children: [Icon(icon), Text(ticketTitle)],
+            )));
   }
 }

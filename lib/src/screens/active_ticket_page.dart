@@ -13,7 +13,7 @@ class ActiveTicketPage extends StatelessWidget {
   final String title;
   final String ticketTitle;
   final IconData icon;
-  final TimeOfDay timeOfSelection;
+  final DateTime timeOfSelection;
 
   @override
   Widget build(BuildContext context) {
