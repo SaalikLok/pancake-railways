@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:pancake_railways/src/widgets/active_ticket.dart';
 
 class ActiveTicketPage extends StatelessWidget {
@@ -19,8 +20,15 @@ class ActiveTicketPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text(title)),
-        body: Column(
-          children: [ActiveTicket(ticketTitle: ticketTitle, icon: icon)],
-        ));
+        body: Container(
+            padding: const EdgeInsets.only(left: 35, right: 35),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ActiveTicket(ticketTitle: ticketTitle, icon: icon),
+                Text("Activated at $timeOfSelection")
+              ],
+            )));
   }
 }
